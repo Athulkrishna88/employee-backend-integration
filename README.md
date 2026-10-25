@@ -1,16 +1,57 @@
-# React + Vite
+# Employee App Backend Integration
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+An employee management dashboard with a Node.js, Express.js, and MongoDB backend.
 
-Currently, two official plugins are available:
+## Features
+- View all employees
+- View an individual employee
+- Add employees
+- Edit employee information
+- Delete employees
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Technologies
+- React and Vite
+- Node.js and Express.js
+- MongoDB Atlas and Mongoose
 
-## React Compiler
+## Setup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Install dependencies:
 
-## Expanding the Oxlint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Create a `.env` file in the project root:
+
+```env
+MONGO_URI=your_mongodb_connection_string
+```
+
+Start the backend:
+
+```bash
+node app.js
+```
+
+In a second terminal, start the frontend:
+
+```bash
+npm run dev
+```
+
+## API Endpoints
+
+| Method | Endpoint |
+|---|---|
+| GET | `/api/employees` |
+| GET | `/api/employees/:id` |
+| POST | `/api/employees` |
+| PUT | `/api/employees/:id` |
+| DELETE | `/api/employees/:id` |
+
+## Security
+Never upload `.env` or your MongoDB credentials to GitHub.
+
+## Repository
+https://github.com/Athulkrishna88/employee-backend-integration
